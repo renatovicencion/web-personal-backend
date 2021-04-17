@@ -10,6 +10,7 @@ const userRoutes = require('./routes/user');
 const menuRoutes = require('./routes/menu');
 const newsletterRoutes = require('./routes/newsletter');
 const courseRoutes = require('./routes/course');
+const postRoutes = require('./routes/post');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -32,5 +33,6 @@ app.use(`/api/${API_VERSION}`, userRoutes);
 app.use(`/api/${API_VERSION}`, menuRoutes);
 app.use(`/api/${API_VERSION}`, newsletterRoutes);
 app.use(`/api/${API_VERSION}`, courseRoutes);
+app.use(`/api/${API_VERSION}`, postRoutes);
 
 module.exports = app;
